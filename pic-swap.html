@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one, #two{
+        width : 350px;
+    }
+    </style>
+    
+
+</head>
+<body>
+    
+    <img src="https://cdn.pixabay.com/photo/2023/03/19/19/36/mountains-7863214_1280.jpg" id="one" alt="">
+    <img src="https://cdn.pixabay.com/photo/2023/07/01/18/21/water-8100724_1280.jpg"     id="two" alt="">
+    <button id="btn">submit</button>
+
+</body>
+
+<script>
+    let img1 = document.querySelector('#one');
+    let img2 = document.querySelector('#two');
+
+    document.querySelector('#btn').addEventListener('click', function(){
+      let pic1 = img1.src;
+      let pic2 = img2.src;
+
+      img1.src = pic2;
+      img2.src = pic1;
+    })
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pp{
+            color: rgb(248, 230, 31);
+        }
+    </style>
+    
+</head>
+<body style="background-color: #313131;">
+    <form id="myform">
+        <label for="p1" class="pp" >Username :</label>
+        <input type="text" id="p1">
+
+        <label for="p2" class="pp">Password :</label>   
+        <input type="text" id="p2" placeholder="Type Here">
+
+        <h4></h4>
+       <button>Click Here</button>
+    </form>
+</body>
+
+<script>
+    //this not the best way go and check formtwo.html file, -->Because here we are creating multiple input varible.
+    let form = document.querySelector('#myform')
+    let inp1 = document.querySelector('#p1');
+    let inp2 = document.querySelector('#p2');
+    let h4  = document.querySelector('#h4')
+
+    form.addEventListener('submit', function(e){
+            e.preventDefault();
+            //console.log(inp1.value, inp2.value)
+
+            if(inp1.value === "" || inp2.value === ""){
+                  h4.textContent = "Error, Some Fields Are Empty";
+                  h4.style.color = "red";
+                }
+                else{
+                    h4.textContent ="";
+                    h4.style.color = "green";
+                }
+           
+     })
+
+
+</script>
+
+</html>

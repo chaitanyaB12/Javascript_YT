@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><form >
+    <input type="text" name="" id="one">
+    <input type="text" id="two">
+    <input type="submit">
+    <h4></h4>
+</form>
+</body>
+
+<script>
+    var form = document.querySelector('form');
+    var inps = document.querySelectorAll('input[type = "text"]');
+    var h4  = document.querySelector('h4');
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        for(var i=0; i<inps.length; i++){
+            if(inps[i].value.trim() === ''){
+                h4.textContent = 'Error, Some Fields Are Empty!';
+                break;
+            }else{
+                h4.textContent = '';
+            }
+    }
+    })
+   
+</script>
+</html>
