@@ -1,2 +1,2 @@
-# Javascript_YT
+# Javascript Course
 A Code Repo For JavaScript Series
